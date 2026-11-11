@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calgary Commercial Cleaning Services | Clean Means Clean Inc.</title>
+<meta name="description" content="Clean Means Clean Inc. provides commercial janitorial, office, retail, warehouse, medical, construction and 24/7 emergency cleaning in Calgary and across Canada since 2005.">
+<link rel="icon" href="images/clean-means-clean-logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0c1610;
+  --forest:#13261b;
+  --moss:#1d3a28;
+  --green:#57b647;
+  --green-d:#3f9431;
+  --mint:#e7f3e2;
+  --paper:#f3f2ec;
+  --line:rgba(12,22,16,.14);
+  --line-l:rgba(255,255,255,.14);
+  --mute:#5d6b62;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --sans:'Archivo',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1320px,92vw);margin:0 auto}
+.tag{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase}
+.wide{font-stretch:125%}
+.cond{font-stretch:75%}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 24px;font-weight:700;font-size:15px;letter-spacing:.02em;border:1.5px solid currentColor;transition:.25s}
+.btn-g{background:var(--green);border-color:var(--green);color:var(--ink)}
+.btn-g:hover{background:#fff;border-color:#fff}
+.btn-o:hover{background:var(--green);border-color:var(--green);color:var(--ink)}
+.btn svg{width:16px;height:16px}
+
+/* ---------- top bar ---------- */
+.topbar{background:var(--green);color:var(--ink)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:9px 0;font-family:var(--mono);font-size:12.5px;letter-spacing:.06em}
+.topbar b{font-weight:500}
+.pulse{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ink);margin-right:10px;animation:p 1.6s infinite}
+@keyframes p{50%{opacity:.25}}
+
+/* ---------- header ---------- */
+header{background:var(--ink);color:#fff;position:sticky;top:0;z-index:50;border-bottom:1px solid var(--line-l)}
+header .wrap{display:flex;align-items:center;gap:40px;height:84px}
+.logo img{height:52px;width:auto}
+nav{display:flex;gap:6px;margin-left:auto}
+nav>div{position:relative}
+nav>div>a{display:block;padding:10px 16px;font-size:15px;font-weight:500}
+nav>div>a:hover{color:var(--green)}
+.drop{position:absolute;top:100%;left:0;background:#fff;color:var(--ink);min-width:300px;padding:10px 0;box-shadow:0 30px 60px -20px rgba(0,0,0,.4);opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s}
+nav>div:hover .drop{opacity:1;visibility:visible;transform:none}
+.drop a{display:block;padding:9px 22px;font-size:14.5px}
+.drop a:hover{background:var(--mint);color:var(--green-d)}
+.hcall{display:flex;flex-direction:column;line-height:1.25;text-align:right}
+.hcall small{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--green);text-transform:uppercase}
+.hcall a{font-weight:700;font-size:17px}
+.burger{display:none;background:none;border:0;color:#fff;margin-left:auto}
+.burger svg{width:30px;height:30px}
+
+/* ---------- hero ---------- */
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.hero-top{display:grid;grid-template-columns:1fr auto;align-items:end;gap:40px;padding:70px 0 46px}
+.hero h1{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:14px;margin-bottom:26px}
+.hero h1:before{content:"";width:46px;height:1.5px;background:var(--green)}
+.hero .big{font-size:clamp(54px,9.4vw,150px);line-height:.86;font-weight:800;font-stretch:118%;letter-spacing:-.035em;text-transform:uppercase}
+.hero .big em{font-style:normal;color:var(--green)}
+.hero .big .out{-webkit-text-stroke:2px #fff;color:transparent}
+.hero-side{max-width:330px;padding-bottom:12px}
+.hero-side p{color:#c4cfc7;margin-bottom:22px}
+.hero-bottom{display:grid;grid-template-columns:1.35fr 1fr;border-top:1px solid var(--line-l)}
+.hero-photo{position:relative;min-height:520px;overflow:hidden}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,22,16,.0) 60%,rgba(12,22,16,.45))}
+.stamp{position:absolute;left:28px;bottom:28px;z-index:2;background:var(--green);color:var(--ink);padding:18px 22px;display:flex;gap:16px;align-items:center}
+.stamp strong{font-size:44px;font-stretch:120%;line-height:1;font-weight:800}
+.stamp span{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;line-height:1.4}
+.hero-form{background:var(--forest);padding:42px 44px}
+.hero-form h2{font-size:26px;font-weight:700;font-stretch:110%;margin-bottom:4px}
+.hero-form>p{color:#a9b8ad;font-size:15px;margin-bottom:24px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form .full{grid-column:1/-1}
+.form label{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;opacity:.75}
+.form input,.form select,.form textarea{width:100%;font:inherit;font-size:15px;padding:13px 14px;border:1px solid var(--line-l);background:rgba(255,255,255,.04);color:#fff;outline:none;transition:.2s}
+.form select option{color:var(--ink)}
+.form textarea{height:92px;resize:vertical}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--green);background:rgba(87,182,71,.06)}
+.form .btn{width:100%;justify-content:center;cursor:pointer;font-family:inherit}
+
+/* ---------- clients ---------- */
+.clients{background:var(--ink);color:#fff;border-top:1px solid var(--line-l)}
+.clients .wrap{display:grid;grid-template-columns:200px 1fr;align-items:center;gap:30px;padding:30px 0}
+.clients .row{display:grid;grid-template-columns:repeat(5,1fr);align-items:center}
+.clients .row img{height:46px;width:auto;margin:auto;opacity:.75;transition:.3s}
+.clients .row img:hover{opacity:1}
+
+/* ---------- ticker values ---------- */
+.ticker{background:var(--paper);border-bottom:1px solid var(--line);overflow:hidden}
+.ticker-in{display:flex;width:max-content;animation:run 38s linear infinite}
+.ticker span{display:flex;align-items:center;gap:26px;padding:22px 26px;font-size:24px;font-weight:700;font-stretch:115%;text-transform:uppercase;white-space:nowrap}
+.ticker span:after{content:"";width:12px;height:12px;background:var(--green);transform:rotate(45deg)}
+@keyframes run{to{transform:translateX(-50%)}}
+
+/* ---------- best in commercial ---------- */
+.best{padding:120px 0}
+.best .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.best-vis{position:relative;height:640px}
+.best-vis .block{position:absolute;left:0;right:22%;top:8%;bottom:0;background:var(--green)}
+.best-vis .grid-bg{position:absolute;inset:8% 22% 0 0;background-image:linear-gradient(rgba(12,22,16,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(12,22,16,.12) 1px,transparent 1px);background-size:40px 40px}
+.best-vis .cut{position:absolute;bottom:0;left:4%;height:100%;width:auto;z-index:2}
+.best-vis .mini{position:absolute;right:0;bottom:60px;width:44%;z-index:3;border:8px solid var(--paper)}
+.best-vis .since{position:absolute;right:0;top:0;z-index:3;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;writing-mode:vertical-rl;color:var(--mute)}
+.sec-label{display:flex;gap:14px;align-items:center;color:var(--green-d);margin-bottom:22px}
+.sec-label i{font-style:normal;color:var(--ink);opacity:.35}
+.h2{font-size:clamp(38px,4.6vw,66px);line-height:.98;font-weight:800;font-stretch:112%;letter-spacing:-.025em;margin-bottom:28px}
+.h2 em{font-style:normal;color:var(--green-d)}
+.best p{color:#3d4a42;margin-bottom:18px;max-width:600px}
+.guarantee{display:flex;align-items:center;gap:18px;margin:34px 0;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.guarantee svg{flex:none;width:52px;height:52px}
+.guarantee strong{font-size:22px;font-stretch:110%;font-weight:700}
+
+/* ---------- services index ---------- */
+.services{background:var(--ink);color:#fff;padding:120px 0}
+.svc-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:60px}
+.svc-head .h2{margin:0}
+.svc-head .h2 em{color:var(--green)}
+.svc-head p{max-width:380px;color:#a9b8ad}
+.svc{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px}
+.svc-preview{position:sticky;top:120px;height:560px;overflow:hidden}
+.svc-preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .5s,transform .9s}
+.svc-preview img.on{opacity:1;transform:none}
+.svc-preview .cap{position:absolute;left:0;bottom:0;z-index:2;background:var(--green);color:var(--ink);padding:12px 18px}
+.svc-list{border-top:1px solid var(--line-l)}
+.svc-item{display:grid;grid-template-columns:60px 1fr 44px;gap:20px;align-items:start;padding:28px 0;border-bottom:1px solid var(--line-l);cursor:pointer;transition:.3s}
+.svc-item .n{font-family:var(--mono);font-size:13px;color:var(--green);padding-top:8px}
+.svc-item h3{font-size:clamp(24px,2.3vw,32px);font-weight:700;font-stretch:112%;line-height:1.1;transition:.3s}
+.svc-item p{color:#93a399;font-size:15.5px;max-height:0;overflow:hidden;opacity:0;transition:max-height .45s,opacity .3s,margin .3s}
+.svc-item .ar{width:44px;height:44px;border:1px solid var(--line-l);display:grid;place-items:center;transition:.3s}
+.svc-item .ar svg{width:18px;height:18px;transition:.3s}
+.svc-item.on h3{color:var(--green)}
+.svc-item.on p{max-height:120px;opacity:1;margin-top:10px}
+.svc-item.on .ar{background:var(--green);border-color:var(--green);color:var(--ink)}
+.svc-item.on .ar svg{transform:rotate(-45deg)}
+
+/* ---------- at your service banner ---------- */
+.serve{position:relative;color:#fff;overflow:hidden}
+.serve img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.serve:before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(12,22,16,.92) 35%,rgba(12,22,16,.25));z-index:1}
+.serve .wrap{position:relative;z-index:2;padding:130px 0;display:flex;justify-content:space-between;align-items:end;gap:40px}
+.serve h2{font-size:clamp(44px,6vw,92px);line-height:.9;font-weight:800;font-stretch:120%;text-transform:uppercase;letter-spacing:-.03em}
+.serve h2 em{font-style:normal;color:var(--green)}
+.serve p{font-size:22px;font-stretch:110%;font-weight:600;margin-top:22px}
+
+/* ---------- why ---------- */
+.why{padding:120px 0}
+.why-top{margin-bottom:64px}
+.why-top p{color:#3d4a42;max-width:520px}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink)}
+.why-card{padding:34px 28px 40px;border-right:1px solid var(--line);position:relative;transition:.35s}
+.why-card:last-child{border-right:0}
+.why-card .num{font-size:84px;font-weight:800;font-stretch:125%;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--green-d);margin-bottom:30px;transition:.35s}
+.why-card h3{font-size:22px;font-weight:700;font-stretch:110%;line-height:1.15;margin-bottom:12px}
+.why-card p{font-size:15.5px;color:#4a574f}
+.why-card:hover{background:var(--forest);color:#fff}
+.why-card:hover p{color:#b5c3b9}
+.why-card:hover .num{color:var(--green);-webkit-text-stroke-color:var(--green)}
+
+/* ---------- process ---------- */
+.process{background:var(--mint);padding:120px 0;position:relative;overflow:hidden}
+.process .h2{max-width:760px}
+.track{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:60px;position:relative}
+.track:before{content:"";position:absolute;left:0;right:0;top:27px;height:2px;background:repeating-linear-gradient(90deg,var(--green-d) 0 10px,transparent 10px 18px)}
+.step{padding-right:50px;position:relative}
+.step .dot{width:56px;height:56px;background:var(--ink);color:var(--green);display:grid;place-items:center;font-family:var(--mono);font-size:15px;position:relative;z-index:2;margin-bottom:34px}
+.step h3{font-size:28px;font-weight:800;font-stretch:115%;line-height:1.05;margin-bottom:14px}
+.step p{color:#3d4a42}
+.step a{color:var(--green-d);font-weight:600;border-bottom:1.5px solid}
+
+/* ---------- testimonials ---------- */
+.reviews{background:var(--forest);color:#fff;padding:120px 0;overflow:hidden}
+.rv{display:grid;grid-template-columns:330px 1fr;gap:80px}
+.rv-side .h2 em{color:var(--green)}
+.rv-nav{display:flex;gap:10px;margin-top:30px}
+.rv-nav button{width:56px;height:56px;background:none;border:1px solid var(--line-l);color:#fff;cursor:pointer;display:grid;place-items:center;transition:.25s}
+.rv-nav button:hover{background:var(--green);border-color:var(--green);color:var(--ink)}
+.rv-nav svg{width:20px;height:20px}
+.rv-count{font-family:var(--mono);font-size:13px;margin-top:22px;color:#a9b8ad}
+.rv>*{min-width:0}
+.rv-stage{position:relative;min-height:400px}
+.rv-slide{position:absolute;inset:0;opacity:0;transform:translateX(30px);transition:.6s;pointer-events:none}
+.rv-slide.on{opacity:1;transform:none;pointer-events:auto}
+.rv-slide .tg{color:var(--green);margin-bottom:22px}
+.rv-slide blockquote{font-size:clamp(24px,2.6vw,36px);line-height:1.28;font-weight:500;font-stretch:96%;letter-spacing:-.01em}
+.rv-slide blockquote:before{content:"\201C";display:block;font-size:110px;line-height:.6;color:var(--green);font-weight:800;margin-bottom:16px}
+.rv-who{display:flex;align-items:center;gap:16px;margin-top:36px;padding-top:24px;border-top:1px solid var(--line-l)}
+.rv-who .av{width:52px;height:52px;background:var(--green);color:var(--ink);display:grid;place-items:center;font-weight:800;font-size:19px;font-stretch:120%}
+.rv-who strong{display:block;font-size:17px}
+.rv-who span{font-family:var(--mono);font-size:12px;color:#a9b8ad;letter-spacing:.06em}
+
+/* ---------- experts / guaranteed ---------- */
+.experts{padding:120px 0}
+.ex-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:stretch}
+.ex-a{grid-column:1/6;position:relative;min-height:540px;overflow:hidden}
+.ex-a img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ex-a .lbl{position:absolute;top:0;left:0;background:var(--ink);color:var(--green);padding:12px 18px}
+.ex-b{grid-column:6/13;display:grid;grid-template-rows:auto 1fr;gap:24px}
+.ex-card{padding:48px 50px;background:#fff;border:1px solid var(--line)}
+.ex-card.dark{background:var(--ink);color:#fff;border:0;display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+.ex-card h3{font-size:clamp(28px,2.8vw,40px);font-weight:800;font-stretch:112%;line-height:1.02;letter-spacing:-.02em;margin-bottom:18px}
+.ex-card p{color:#3d4a42;margin-bottom:24px}
+.ex-card.dark p{color:#b5c3b9}
+.ex-card a.inl{color:var(--green-d);font-weight:600;border-bottom:1.5px solid}
+.ex-card.dark a.inl{color:var(--green)}
+.checks{list-style:none;display:grid;gap:0;align-content:center}
+.checks li{display:flex;gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line-l);font-weight:600;font-size:18px;font-stretch:108%}
+.checks li:first-child{border-top:1px solid var(--line-l)}
+.checks svg{flex:none;width:26px;height:26px;color:var(--green)}
+
+/* ---------- prepare ---------- */
+.prep{background:var(--ink);color:#fff;padding:120px 0}
+.prep-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.prep .h2 em{color:var(--green)}
+.prep p{color:#b5c3b9;margin-bottom:18px}
+.prep p a{color:var(--green);border-bottom:1px solid}
+.sheet{background:var(--paper);color:var(--ink);padding:40px 40px 30px;position:relative;box-shadow:16px 16px 0 var(--green)}
+.sheet-h{display:flex;justify-content:space-between;padding-bottom:18px;border-bottom:2px solid var(--ink);margin-bottom:6px}
+.sheet-h strong{font-size:20px;font-stretch:115%;font-weight:800;text-transform:uppercase}
+.chk{display:grid;grid-template-columns:36px 1fr;gap:18px;padding:24px 0;border-bottom:1px dashed var(--line);cursor:pointer}
+.chk:last-of-type{border-bottom:0}
+.box{width:36px;height:36px;border:2px solid var(--ink);display:grid;place-items:center;transition:.25s}
+.box svg{width:20px;height:20px;opacity:0;transform:scale(.4);transition:.25s}
+.chk.done .box{background:var(--green);border-color:var(--green)}
+.chk.done .box svg{opacity:1;transform:none}
+.chk .tag{color:var(--green-d)}
+.chk h4{font-size:20px;font-weight:700;font-stretch:108%;line-height:1.2;margin-top:4px}
+.sheet-f{font-family:var(--mono);font-size:12px;color:var(--mute);padding-top:16px;border-top:1px solid var(--line)}
+
+/* ---------- best there is ---------- */
+.bestis{display:grid;grid-template-columns:1fr 1fr;min-height:520px}
+.bestis-img{position:relative;overflow:hidden}
+.bestis-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bestis-txt{background:var(--green);padding:80px 7vw 80px 70px;display:flex;flex-direction:column;justify-content:center}
+.bestis-txt h2{font-size:clamp(44px,5.6vw,84px);line-height:.88;font-weight:800;font-stretch:122%;text-transform:uppercase;letter-spacing:-.03em;margin-bottom:26px}
+.bestis-txt p{font-size:18px;max-width:520px;margin-bottom:34px}
+.bestis-txt .btn{align-self:flex-start;background:var(--ink);color:#fff;border-color:var(--ink);font-size:17px}
+.bestis-txt .btn:hover{background:#fff;color:var(--ink);border-color:#fff}
+
+/* ---------- contact ---------- */
+.contact{padding:120px 0}
+.ct{display:grid;grid-template-columns:1fr 1.1fr;gap:70px}
+.ct-info{display:grid;gap:0;margin-top:34px;border-top:1px solid var(--line)}
+.ct-info a,.ct-info div{display:grid;grid-template-columns:130px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);font-size:18px;font-weight:600}
+.ct-info .tag{color:var(--mute);padding-top:4px}
+.ct-info a:hover{color:var(--green-d)}
+.socials{display:flex;gap:10px;margin-top:28px}
+.socials a{width:48px;height:48px;border:1px solid var(--ink);display:grid;place-items:center;transition:.25s}
+.socials a:hover{background:var(--ink);color:var(--green)}
+.socials svg{width:19px;height:19px}
+.ct-form{background:var(--forest);color:#fff;padding:46px}
+.ct-form h3{font-size:28px;font-weight:800;font-stretch:112%;margin-bottom:24px}
+.map{margin-top:70px;height:360px;filter:grayscale(1) contrast(1.05);border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;border:0}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#fff;padding:90px 0 0;overflow:hidden}
+.ft{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;padding-bottom:70px}
+.ft img{height:64px;width:auto;margin-bottom:22px}
+.ft p{color:#a9b8ad;font-size:15px;max-width:330px}
+.ft h4{color:var(--green);margin-bottom:20px}
+.ft ul{list-style:none;display:grid;gap:10px;font-size:15px;color:#c9d4cc}
+.ft ul a:hover{color:var(--green)}
+.ft-word{font-size:clamp(40px,9.6vw,170px);font-weight:900;font-stretch:112%;line-height:.8;letter-spacing:-.04em;text-transform:uppercase;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.16);white-space:nowrap;text-align:center;margin-bottom:-.12em;user-select:none}
+.ft-bot{border-top:1px solid var(--line-l);background:var(--ink);position:relative;z-index:2}
+.ft-bot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;padding:24px 0;font-size:14px;color:#a9b8ad}
+.ft-bot a{color:#fff}
+.ft-bot a:hover{color:var(--green)}
+.ft-bot nav{display:flex;gap:22px;margin:0}
+
+/* reveal */
+.rv-up{opacity:0;transform:translateY(34px);transition:opacity .8s,transform .8s}
+.rv-up.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media(max-width:1100px){
+  nav,.hcall{display:none}
+  .burger{display:block}
+  nav.open{display:flex;flex-direction:column;position:absolute;top:84px;left:0;right:0;background:var(--ink);padding:14px 4vw 24px;border-top:1px solid var(--line-l)}
+  nav.open .drop{position:static;opacity:1;visibility:visible;transform:none;background:none;color:#c9d4cc;box-shadow:none;padding:0 0 0 14px}
+  .hero-top{grid-template-columns:1fr}
+  .hero-bottom,.best .wrap,.svc,.why-top,.rv,.prep-grid,.ct,.bestis{grid-template-columns:1fr}
+  .svc-preview{display:none}
+  .svc-item p{max-height:none;opacity:1;margin-top:10px}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .why-card:nth-child(2){border-right:0}
+  .ex-a,.ex-b{grid-column:1/-1}
+  .ex-card.dark{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr 1fr}
+  .bestis-img{min-height:380px}
+  .best-vis{height:540px}
+}
+@media(max-width:680px){
+  .topbar .hide-m,.hide-t{display:none}
+  .hero-photo{min-height:340px}
+  .hero-form,.ct-form{padding:30px 22px}
+  .form{grid-template-columns:1fr}
+  .clients .wrap{grid-template-columns:1fr}
+  .clients .row{grid-template-columns:repeat(3,1fr);gap:18px}
+  .svc-head{flex-direction:column;align-items:start}
+  .why-grid{grid-template-columns:1fr}
+  .svc-item{grid-template-columns:34px 1fr 40px;gap:12px}
+  .svc-item .ar{width:40px;height:40px}
+  .why-card{border-right:0;border-bottom:1px solid var(--line)}
+  .track{grid-template-columns:1fr;gap:40px}
+  .track:before{display:none}
+  .serve .wrap{flex-direction:column;align-items:start;padding:90px 0}
+  .ex-card{padding:32px 24px}
+  .rv-stage{min-height:560px}
+  .best-vis{height:440px}
+  .sheet{padding:28px 22px}
+  .bestis-txt{padding:60px 6vw}
+  .ft{grid-template-columns:1fr}
+  .ct-info a,.ct-info div{grid-template-columns:1fr;gap:4px}
+  .best,.services,.why,.process,.reviews,.experts,.prep,.contact{padding:84px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span><span class="pulse"></span><b>Cleaners Available 24/7</b> &nbsp;for emergency cleaning</span>
+    <span class="hide-m">102-4127 Bow Trail SW, Calgary, AB T3C 2E9</span>
+    <a href="mailto:clean@cleanmeansclean.com">clean@cleanmeansclean.com</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <a href="https://cleanmeansclean.com/" class="logo"><img src="images/clean-means-clean-logo.svg" alt="Clean Means Clean Inc."></a>
+    <nav id="nav">
+      <div><a href="https://cleanmeansclean.com/about-us/">About</a>
+        <div class="drop"><a href="https://cleanmeansclean.com/about-us/">About Us</a><a href="https://cleanmeansclean.com/about-us/blog/">Blogs</a></div>
+      </div>
+      <div><a href="#services">Cleaning Services</a>
+        <div class="drop">
+          <a href="https://cleanmeansclean.com/corporate-cleaning-calgary/">Corporate Cleaning</a>
+          <a href="https://cleanmeansclean.com/commercial-retail-cleaning-calgary/">Commercial &amp; Retail Cleaning</a>
+          <a href="https://cleanmeansclean.com/commercial-office-cleaning-calgary/">Commercial Offices</a>
+          <a href="https://cleanmeansclean.com/construction-cleaning-calgary/">Construction Cleaning</a>
+          <a href="https://cleanmeansclean.com/medical-office-cleaning-calgary/">Medical Office &amp; Health Care</a>
+          <a href="https://cleanmeansclean.com/warehouse-industrial-cleaning-calgary/">Warehouse &amp; Industrial</a>
+          <a href="https://cleanmeansclean.com/commercial-janitorial-cleaning-calgary/">Specialty Cleaning &amp; Janitorial</a>
+          <a href="https://cleanmeansclean.com/emergency-cleaning-services-calgary/">Emergency Cleaning</a>
+          <a href="https://cleanmeansclean.com/hotel-cleaning-services-calgary/">Hospitality &amp; Hotels</a>
+        </div>
+      </div>
+      <div><a href="https://cleanmeansclean.com/request-a-quote/">Request A Quote</a></div>
+      <div><a href="https://cleanmeansclean.com/contact-us/">Contact Us</a></div>
+    </nav>
+    <div class="hcall"><small>Call us</small><a href="tel:+15879732964">+1 (587) 973-2964</a></div>
+    <a href="https://cleanmeansclean.com/request-a-quote/" class="btn btn-g hide-t" style="padding:13px 20px">Request a Quote</a>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-top">
+    <div>
+      <h1>Calgary Commercial Cleaning Services</h1>
+      <div class="big">We clean<br>the <em>impo</em><span class="out">ssible.</span></div>
+    </div>
+    <div class="hero-side">
+      <p>Commercial janitorial, office, retail, warehouse, medical, construction and emergency cleaning. Founded in Calgary in 2005, now serving clients across Canada.</p>
+      <a href="tel:+15879732964" class="btn btn-o">Call +1 (587) 973-2964
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+  <div class="hero-bottom">
+    <div class="hero-photo">
+      <img src="images/commercial-retail.webp" alt="Clean Means Clean cleaner deep cleaning a commercial floor in Calgary">
+      <div class="stamp"><strong>24/7</strong><span>Emergency<br>cleaning crews</span></div>
+    </div>
+    <div class="hero-form">
+      <h2>Get a free quote</h2>
+      <p>Tell us about your space and we'll get back to you.</p>
+      <form class="form" onsubmit="event.preventDefault();this.querySelector('button').textContent='Thank you, we will be in touch';">
+        <div class="full"><label>Full Name</label><input type="text" required></div>
+        <div><label>Email</label><input type="email" required></div>
+        <div><label>Phone Number</label><input type="tel"></div>
+        <div class="full"><label>Business Type</label>
+          <select><option>Corporate Cleaning</option><option>Commercial &amp; Retail Cleaning</option><option>Commercial Offices</option><option>Construction Cleaning</option><option>Medical Office &amp; Health Care</option><option>Warehouse &amp; Industrial</option><option>Specialty Cleaning &amp; Janitorial</option><option>Emergency Cleaning</option><option>Hospitality &amp; Hotels</option><option>Other</option></select></div>
+        <div class="full"><label>Message</label><textarea></textarea></div>
+        <div class="full"><button class="btn btn-g" type="submit">Send Request
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<section class="clients">
+  <div class="wrap">
+    <span class="tag" style="color:var(--green)">Trusted by</span>
+    <div class="row">
+      <img src="images/client-loblaws.webp" alt="Loblaws">
+      <img src="images/client-no-frills.webp" alt="No Frills">
+      <img src="images/client-leons.webp" alt="Leon's">
+      <img src="images/client-superstore.webp" alt="Real Canadian Superstore">
+      <img src="images/client-wholesale-club.webp" alt="Wholesale Club">
+    </div>
+  </div>
+</section>
+
+<div class="ticker"><div class="ticker-in">
+  <span>Locally Owned &amp; Operated</span><span>High Quality Standards</span><span>Unbeatable Rates</span><span>Cleaners Available 24/7</span>
+  <span>Locally Owned &amp; Operated</span><span>High Quality Standards</span><span>Unbeatable Rates</span><span>Cleaners Available 24/7</span>
+</div></div>
+
+<!-- BEST IN COMMERCIAL -->
+<section class="best">
+  <div class="wrap">
+    <div class="best-vis rv-up">
+      <div class="block"></div><div class="grid-bg"></div>
+      <img class="cut" src="images/cleaner-cutout.webp" alt="Clean Means Clean team member">
+      <img class="mini" src="images/corporate-cleaning.webp" alt="Corporate office cleaning in Calgary">
+      <span class="since">Est. 2005 · Calgary, Alberta</span>
+    </div>
+    <div class="rv-up">
+      <div class="sec-label tag"><i>01</i> About Clean Means Clean</div>
+      <h2 class="h2">The best in <em>commercial cleaning.</em></h2>
+      <p>We guarantee your satisfaction. A clean space shapes the impression your business makes on every customer, client and employee who walks through the door.</p>
+      <p>Our trained staff are always ready, and we're solutions-oriented: we deliver the highest standard of service and get the job right the first time.</p>
+      <div class="guarantee">
+        <svg viewBox="0 0 52 52" fill="none"><path d="M26 3l19 7v14c0 12-8 21-19 25C15 45 7 36 7 24V10l19-7z" fill="#57b647"/><path d="M17 26l6 6 12-13" stroke="#0c1610" stroke-width="3.2"/></svg>
+        <strong>Clean Means Clean: guaranteed.</strong>
+      </div>
+      <a href="https://cleanmeansclean.com/request-a-quote/" class="btn" style="background:var(--ink);color:#fff;border-color:var(--ink)">Request a Quote
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-head rv-up">
+      <div>
+        <div class="sec-label tag" style="color:var(--green)"><i style="color:#fff">02</i> What we clean</div>
+        <h2 class="h2">Our commercial<br><em>cleaning services.</em></h2>
+      </div>
+      <p>Nine specialized services, one standard. Hover a service to see it in action, or open it to learn more.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-preview">
+        <img class="on" src="images/corporate-cleaning.webp" alt="Corporate cleaning">
+        <img src="images/commercial-retail.webp" alt="Commercial and retail cleaning">
+        <img src="images/office-cleaning.webp" alt="Office cleaning">
+        <img src="images/construction-cleaning.webp" alt="Construction cleaning">
+        <img src="images/specialty-cleaning.webp" alt="Warehouse and industrial cleaning">
+        <img src="images/emergency-cleaning.webp" alt="Emergency cleaning">
+        <img src="images/medical-office.webp" alt="Medical office cleaning">
+        <img src="images/lobby-clean.webp" alt="Hospitality and hotel cleaning">
+        <img src="images/office-crew.webp" alt="Specialty cleaning and janitorial">
+        <span class="cap tag" id="svcCap">01 / Corporate Cleaning</span>
+      </div>
+      <div class="svc-list">
+        <a class="svc-item on" href="https://cleanmeansclean.com/corporate-cleaning-calgary/"><span class="n">01</span><div><h3>Corporate Cleaning</h3><p>Tailored corporate cleaning that includes dusting, vacuuming and sanitizing workstations, break rooms and restrooms.</p></div><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="svc-item" href="https://cleanmeansclean.com/commercial-retail-cleaning-calgary/"><span class="n">02</span><div><h3>Commercial &amp; Retail Cleaning</h3><p>Top-quality cleaning for commercial and retail spaces, keeping them clean and inviting for customers and staff.</p></div><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="svc-item" href="https://cleanmeansclean.com/commercial-office-cleaning-calgary/"><span class="n">03</span><div><h3>Office Cleaning</h3><p>We keep offices clean and organized with desk cleaning, trash removal and bathroom sanitization, under efficient and discreet custom contracts.</p></div><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="svc-item" href="https://cleanmeansclean.com/construction-cleaning-calgary/"><span class="n">04</span><div><h3>Construction Cleaning</h3><p>Thorough cleaning for newly built or renovated spaces, removing debris to get them ready for occupancy, plus ongoing cleaning on active construction sites.</p></div><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="svc-item" href="https://cleanmeansclean.com/warehouse-industrial-cleaning-calgary/"><span class="n">05</span><div><h3>Warehouse &amp; Industrial</h3><p>Our team is equipped for the unique challenges of warehouse and industrial cleaning, including high ceilings, heavy machinery and floors.</p></div><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="svc-item" href="https://cleanmeansclean.com/emergency-cleaning-services-calgary/"><span class="n">06</span><div><h3>Emergency Cleaning</h3><p>Emergency cleaning for unexpected spills, floods and other emergencies. We arrive promptly and handle every situation safely.</p></div><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="svc-item" href="https://cleanmeansclean.com/medical-office-cleaning-calgary/"><span class="n">07</span><div><h3>Medical Office &amp; Health Care</h3><p>Specialized cleaning for medical offices and health care facilities, including disinfection of exam rooms, waiting areas and surgical suites.</p></div><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="svc-item" href="https://cleanmeansclean.com/hotel-cleaning-services-calgary/"><span class="n">08</span><div><h3>Hospitality &amp; Hotels</h3><p>Guest rooms, linen services, lobbies and restaurants, all kept clean and welcoming for your guests.</p></div><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="svc-item" href="https://cleanmeansclean.com/commercial-janitorial-cleaning-calgary/"><span class="n">09</span><div><h3>Specialty Cleaning &amp; Janitorial</h3><p>Regular janitorial, maintenance and specialty cleaning jobs. No job is too big or too small for our team.</p></div><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AT YOUR SERVICE -->
+<section class="serve">
+  <img src="images/open-office.webp" alt="Spotless open-plan commercial office">
+  <div class="wrap">
+    <div class="rv-up">
+      <h2>Commercial cleaning,<br><em>at your service.</em></h2>
+      <p>Best Service. Great Value.</p>
+    </div>
+    <a href="https://cleanmeansclean.com/contact-us/" class="btn btn-g">Book Now
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="wrap">
+    <div class="why-top rv-up">
+      <div>
+        <div class="sec-label tag"><i>03</i> Why us</div>
+        <h2 class="h2" style="margin:0">Why choose<br><em>Clean Means Clean.</em></h2>
+      </div>
+    </div>
+    <div class="why-grid rv-up">
+      <div class="why-card"><div class="num">01</div><h3>Locally Owned &amp; Operated</h3><p>Founded in Calgary in 2005 and now serving clients across Canada. Our team cares about giving back to the community.</p></div>
+      <div class="why-card"><div class="num">02</div><h3>High Quality Standards</h3><p>Our name is our guarantee. We bring the highest standards to every job, no matter the size or difficulty.</p></div>
+      <div class="why-card"><div class="num">03</div><h3>Unbeatable Rates</h3><p>Every service is customized to give you real value. Call us today for our rates.</p></div>
+      <div class="why-card"><div class="num">04</div><h3>Cleaners Available 24/7</h3><p>Emergency cleaning with a quick response, backed by the right equipment and expertise.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="wrap">
+    <div class="sec-label tag rv-up"><i>04</i> How it works</div>
+    <h2 class="h2 rv-up">Our commercial <em>cleaning process.</em></h2>
+    <div class="track">
+      <div class="step rv-up"><div class="dot">01</div><h3>Get in Touch</h3><p>Contact us so we can take the right information to get the job done. Once we agree on expectations, we provide a quote and contract for your review.</p></div>
+      <div class="step rv-up"><div class="dot">02</div><h3>Choose a Service</h3><p>Clean Means Clean offers numerous value-added services, including <a href="https://cleanmeansclean.com/emergency-cleaning-services-calgary/">emergency cleaning</a>. Need something specific? Just ask.</p></div>
+      <div class="step rv-up"><div class="dot">03</div><h3>Let Us Work Our Magic</h3><p>At CMC, our staff are thoroughly trained on what clean really means. We leave you with a spotless, hospitable space.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="reviews">
+  <div class="wrap rv">
+    <div class="rv-side rv-up">
+      <div class="sec-label tag" style="color:var(--green)"><i style="color:#fff">05</i> Client stories</div>
+      <h2 class="h2">Customer satisfaction <em>guaranteed.</em></h2>
+      <div class="rv-nav">
+        <button onclick="slide(-1)" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+        <button onclick="slide(1)" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+      <div class="rv-count" id="rvCount">01 / 04</div>
+    </div>
+    <div class="rv-stage">
+      <div class="rv-slide on">
+        <div class="tag tg">Never Disappointed</div>
+        <blockquote>I've been using Clean means Clean Janitorial for the past 7 years. Brian's experience and cost-effective approach stand out, and any problem is handled quickly.</blockquote>
+        <div class="rv-who"><div class="av">RB</div><div><strong>Ray B.</strong><span>Owner, Abbotsford No Frills</span></div></div>
+      </div>
+      <div class="rv-slide">
+        <div class="tag tg">Highly Recommend</div>
+        <blockquote>Have been using Clean Means Clean for over 5 years, since we opened our store in 2017. The staff are professional and no job has been too big or too small.</blockquote>
+        <div class="rv-who"><div class="av">K</div><div><strong>Kiven</strong><span>Client since 2017</span></div></div>
+      </div>
+      <div class="rv-slide">
+        <div class="tag tg">High Quality Work</div>
+        <blockquote>Their team provides high quality work every time. Day-to-day cleaning, window cleaning, floor stripping and waxing, and special requests sorted with one phone call.</blockquote>
+        <div class="rv-who"><div class="av">EN</div><div><strong>Eric N.</strong><span>Client for 3 years</span></div></div>
+      </div>
+      <div class="rv-slide">
+        <div class="tag tg">Excellent Relationship</div>
+        <blockquote>I started using Clean means Clean in 2013 when we had the most damaging flood in Canadian history. What began as business has become a friendship.</blockquote>
+        <div class="rv-who"><div class="av">RT</div><div><strong>Rob T.</strong><span>Client since 2013</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTS + GUARANTEED -->
+<section class="experts">
+  <div class="wrap ex-grid">
+    <div class="ex-a rv-up">
+      <img src="images/lobby-clean.webp" alt="Clean commercial lobby in Calgary">
+      <span class="lbl tag">Restaurants · Hotels · Retail</span>
+    </div>
+    <div class="ex-b">
+      <div class="ex-card rv-up">
+        <div class="sec-label tag"><i>06</i> Local expertise</div>
+        <h3>Calgary's commercial cleaning experts.</h3>
+        <p>We have the knowledge and tools to serve restaurants, <a class="inl" href="https://cleanmeansclean.com/hotel-cleaning-services-calgary/">hotels</a> and retail spaces. Discover how we can help your business.</p>
+        <a href="https://cleanmeansclean.com/contact-us/" class="btn" style="background:var(--ink);color:#fff;border-color:var(--ink)">Get in Touch Today
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="ex-card dark rv-up">
+        <div>
+          <h3>Clean Means Clean, <span style="color:var(--green)">guaranteed.</span></h3>
+          <p style="margin:0">From regular cleaning and maintenance to specialty jobs and <a class="inl" href="https://cleanmeansclean.com/warehouse-industrial-cleaning-calgary/">industrial cleaning</a>, no job is too big or too small. Your satisfaction is at the centre of everything we do.</p>
+        </div>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Ensure proper sanitization</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Keep areas clean &amp; tidy</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Improve your space</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREPARE -->
+<section class="prep">
+  <div class="wrap prep-grid">
+    <div class="rv-up">
+      <div class="sec-label tag" style="color:var(--green)"><i style="color:#fff">07</i> Before we arrive</div>
+      <h2 class="h2">How to prepare for our <em>commercial cleaning services.</em></h2>
+      <p>Start by identifying the areas you need cleaned and any specific needs. We'll go over these with you during intake.</p>
+      <p>On service day, clear the clutter, make surfaces accessible, put away fragile items and let everyone in the building know the cleaning schedule. Learn more about our <a href="https://cleanmeansclean.com/commercial-janitorial-cleaning-calgary/">janitorial cleaning</a>.</p>
+    </div>
+    <div class="sheet rv-up">
+      <div class="sheet-h"><strong>Prep Checklist</strong><span class="tag">CMC · Calgary</span></div>
+      <div class="chk done"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0c1610" stroke-width="3"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div><div><span class="tag">Step 01</span><h4>Identify the areas to be cleaned and your specific needs</h4></div></div>
+      <div class="chk"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0c1610" stroke-width="3"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div><div><span class="tag">Step 02</span><h4>Tidy the space and clear surfaces</h4></div></div>
+      <div class="chk"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#0c1610" stroke-width="3"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div><div><span class="tag">Step 03</span><h4>Leave the thorough clean to our team</h4></div></div>
+      <div class="sheet-f">Tap each step to tick it off</div>
+    </div>
+  </div>
+</section>
+
+<!-- BEST THERE IS -->
+<section class="bestis">
+  <div class="bestis-img"><img src="images/desk-cleaning.webp" alt="Clean Means Clean staff wiping down office desks"></div>
+  <div class="bestis-txt">
+    <h2>We're the best there is.</h2>
+    <p>We treat every client with respect, keep your business confidential, honour our commitments and deliver high-quality work with a strong focus on your satisfaction.</p>
+    <a href="tel:+15879732964" class="btn">Call Now +1 (587) 973-2964
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="ct">
+      <div class="rv-up">
+        <div class="sec-label tag"><i>08</i> Contact</div>
+        <h2 class="h2">Get in touch <em>with us.</em></h2>
+        <div class="ct-info">
+          <a href="tel:+15879732964"><span class="tag">Phone</span>+1 (587) 973-2964</a>
+          <a href="mailto:clean@cleanmeansclean.com"><span class="tag">Email</span>clean@cleanmeansclean.com</a>
+          <a href="https://maps.google.com/?q=102-4127+Bow+Trail+SW,+Calgary,+AB+T3C+2E9" target="_blank" rel="noopener"><span class="tag">Office</span>102-4127 Bow Trail SW, Calgary, AB T3C 2E9</a>
+        </div>
+        <div class="socials">
+          <a href="https://www.facebook.com/profile.php?id=100089507284266" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v9h4v-9h3l.5-4h-3.5V8.8c0-.5.3-.8.5-.8z"/></svg></a>
+          <a href="https://www.linkedin.com/company/clean-means-clean/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V21h-4z"/></svg></a>
+        </div>
+      </div>
+      <div class="ct-form rv-up">
+        <h3>Send us a message</h3>
+        <form class="form" onsubmit="event.preventDefault();this.querySelector('button').textContent='Thank you, we will be in touch';">
+          <div class="full"><label>Full Name</label><input type="text" required></div>
+          <div><label>Email</label><input type="email" required></div>
+          <div><label>Phone Number</label><input type="tel"></div>
+          <div class="full"><label>Business Type</label>
+            <select><option>Corporate Cleaning</option><option>Commercial &amp; Retail Cleaning</option><option>Commercial Offices</option><option>Construction Cleaning</option><option>Medical Office &amp; Health Care</option><option>Warehouse &amp; Industrial</option><option>Specialty Cleaning &amp; Janitorial</option><option>Emergency Cleaning</option><option>Hospitality &amp; Hotels</option><option>Other</option></select></div>
+          <div class="full"><label>Message</label><textarea></textarea></div>
+          <div class="full"><button class="btn btn-g" type="submit">Submit
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+        </form>
+      </div>
+    </div>
+    <div class="map rv-up"><iframe loading="lazy" title="Clean Means Clean office map" src="https://maps.google.com/maps?q=102-4127%20Bow%20Trail%20SW%2C%20Calgary%2C%20AB%20T3C%202E9&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap ft">
+    <div>
+      <img src="images/clean-means-clean-logo.svg" alt="Clean Means Clean Inc.">
+      <p>Calgary commercial cleaning since 2005, now serving clients across Canada. Satisfaction guaranteed.</p>
+    </div>
+    <div>
+      <h4 class="tag">Services</h4>
+      <ul>
+        <li><a href="https://cleanmeansclean.com/corporate-cleaning-calgary/">Corporate Cleaning</a></li>
+        <li><a href="https://cleanmeansclean.com/commercial-retail-cleaning-calgary/">Commercial &amp; Retail</a></li>
+        <li><a href="https://cleanmeansclean.com/commercial-office-cleaning-calgary/">Commercial Offices</a></li>
+        <li><a href="https://cleanmeansclean.com/construction-cleaning-calgary/">Construction Cleaning</a></li>
+        <li><a href="https://cleanmeansclean.com/medical-office-cleaning-calgary/">Medical Office &amp; Health Care</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="tag">&nbsp;</h4>
+      <ul>
+        <li><a href="https://cleanmeansclean.com/warehouse-industrial-cleaning-calgary/">Warehouse &amp; Industrial</a></li>
+        <li><a href="https://cleanmeansclean.com/commercial-janitorial-cleaning-calgary/">Specialty &amp; Janitorial</a></li>
+        <li><a href="https://cleanmeansclean.com/emergency-cleaning-services-calgary/">Emergency Cleaning</a></li>
+        <li><a href="https://cleanmeansclean.com/hotel-cleaning-services-calgary/">Hospitality &amp; Hotels</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="tag">Company</h4>
+      <ul>
+        <li><a href="https://cleanmeansclean.com/about-us/">About Us</a></li>
+        <li><a href="https://cleanmeansclean.com/about-us/blog/">Blogs</a></li>
+        <li><a href="https://cleanmeansclean.com/request-a-quote/">Request A Quote</a></li>
+        <li><a href="https://cleanmeansclean.com/contact-us/">Contact Us</a></li>
+        <li><a href="tel:+15879732964">+1 (587) 973-2964</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-word">Clean Means Clean</div>
+  <div class="ft-bot">
+    <div class="wrap">
+      <span>&copy; <span id="yr">2026</span> Clean Means Clean Inc. All rights reserved.</span>
+      <nav><a href="https://cleanmeansclean.com/privacy-policy-terms-disclaimer/">Terms</a><a href="https://cleanmeansclean.com/sitemap/">Sitemap</a></nav>
+      <span>Design by <a href="https://cleanningdigital.com/" target="_blank" rel="noopener">Cleaning Digital</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+// services hover preview
+const items=[...document.querySelectorAll('.svc-item')],pics=[...document.querySelectorAll('.svc-preview img')],cap=document.getElementById('svcCap');
+items.forEach((it,i)=>it.addEventListener('mouseenter',()=>{
+  items.forEach(x=>x.classList.remove('on'));pics.forEach(x=>x.classList.remove('on'));
+  it.classList.add('on');pics[i].classList.add('on');
+  cap.textContent=it.querySelector('.n').textContent+' / '+it.querySelector('h3').textContent;
+}));
+// testimonials
+const slides=[...document.querySelectorAll('.rv-slide')];let cur=0,timer;
+function slide(d){slides[cur].classList.remove('on');cur=(cur+d+slides.length)%slides.length;slides[cur].classList.add('on');
+  document.getElementById('rvCount').textContent=String(cur+1).padStart(2,'0')+' / 0'+slides.length;clearInterval(timer);timer=setInterval(()=>slide(1),7000)}
+timer=setInterval(()=>slide(1),7000);
+// checklist
+document.querySelectorAll('.chk').forEach(c=>c.addEventListener('click',()=>c.classList.toggle('done')));
+// reveal
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv-up').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
