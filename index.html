@@ -189,25 +189,36 @@ nav>div:hover .drop{opacity:1;visibility:visible;transform:none}
 .step a{color:var(--green-d);font-weight:600;border-bottom:1.5px solid}
 
 /* ---------- testimonials ---------- */
-.reviews{background:var(--forest);color:#fff;padding:120px 0;overflow:hidden}
-.rv{display:grid;grid-template-columns:330px 1fr;gap:80px}
-.rv-side .h2 em{color:var(--green)}
-.rv-nav{display:flex;gap:10px;margin-top:30px}
-.rv-nav button{width:56px;height:56px;background:none;border:1px solid var(--line-l);color:#fff;cursor:pointer;display:grid;place-items:center;transition:.25s}
+.reviews{background:var(--forest);color:#fff;padding:110px 0;overflow:hidden}
+.rv-top{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:50px}
+.rv-top .h2{margin:0}
+.rv-top .h2 em{color:var(--green)}
+.rv-nav{display:flex;gap:10px}
+.rv-nav button{width:54px;height:54px;background:none;border:1px solid var(--line-l);color:#fff;cursor:pointer;display:grid;place-items:center;transition:.25s}
 .rv-nav button:hover{background:var(--green);border-color:var(--green);color:var(--ink)}
 .rv-nav svg{width:20px;height:20px}
-.rv-count{font-family:var(--mono);font-size:13px;margin-top:22px;color:#a9b8ad}
-.rv>*{min-width:0}
-.rv-stage{position:relative;min-height:400px}
-.rv-slide{position:absolute;inset:0;opacity:0;transform:translateX(30px);transition:.6s;pointer-events:none}
+.rv-body{display:grid;grid-template-columns:.8fr 1.2fr;min-height:420px}
+.rv-photo{position:relative;overflow:hidden}
+.rv-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rv-photo .count{position:absolute;left:0;top:0;background:var(--green);color:var(--ink);padding:12px 18px}
+.rv-card{background:var(--paper);color:var(--ink);padding:60px 64px;position:relative;display:grid}
+.rv-slide{grid-area:1/1;opacity:0;transform:translateY(14px);transition:.5s;pointer-events:none;display:flex;flex-direction:column;justify-content:center}
 .rv-slide.on{opacity:1;transform:none;pointer-events:auto}
-.rv-slide .tg{color:var(--green);margin-bottom:22px}
-.rv-slide blockquote{font-size:clamp(24px,2.6vw,36px);line-height:1.28;font-weight:500;font-stretch:96%;letter-spacing:-.01em}
-.rv-slide blockquote:before{content:"\201C";display:block;font-size:110px;line-height:.6;color:var(--green);font-weight:800;margin-bottom:16px}
-.rv-who{display:flex;align-items:center;gap:16px;margin-top:36px;padding-top:24px;border-top:1px solid var(--line-l)}
-.rv-who .av{width:52px;height:52px;background:var(--green);color:var(--ink);display:grid;place-items:center;font-weight:800;font-size:19px;font-stretch:120%}
-.rv-who strong{display:block;font-size:17px}
-.rv-who span{font-family:var(--mono);font-size:12px;color:#a9b8ad;letter-spacing:.06em}
+.rv-slide .tg{color:var(--green-d);margin-bottom:18px;display:flex;align-items:center;gap:14px}
+.rv-slide .tg:before{content:"\201C";font-family:var(--sans);font-size:64px;line-height:.5;font-weight:800;color:var(--green);padding-top:22px}
+.rv-slide blockquote{font-size:clamp(19px,1.6vw,23px);line-height:1.6;font-weight:400;color:#2c3831;max-width:600px}
+.rv-who{display:flex;align-items:center;gap:14px;margin-top:30px}
+.rv-who .av{width:46px;height:46px;background:var(--ink);color:var(--green);display:grid;place-items:center;font-weight:800;font-size:16px;font-stretch:120%}
+.rv-who strong{display:block;font-size:16px}
+.rv-who span{font-family:var(--mono);font-size:12px;color:var(--mute);letter-spacing:.04em}
+.rv-tabs{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line-l)}
+.rv-tab{background:none;border:0;border-top:3px solid transparent;color:#a9b8ad;text-align:left;padding:22px 24px;cursor:pointer;font-family:inherit;transition:.25s;border-right:1px solid var(--line-l)}
+.rv-tab:last-child{border-right:0}
+.rv-tab strong{display:block;color:#fff;font-size:16px;font-weight:700;margin-bottom:2px}
+.rv-tab span{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase}
+.rv-tab:hover{background:rgba(255,255,255,.04)}
+.rv-tab.on{border-top-color:var(--green);background:rgba(87,182,71,.08)}
+.rv-tab.on span{color:var(--green)}
 
 /* ---------- experts / guaranteed ---------- */
 .experts{padding:120px 0}
@@ -304,9 +315,13 @@ footer{background:var(--ink);color:#fff;padding:90px 0 0;overflow:hidden}
   nav.open{display:flex;flex-direction:column;position:absolute;top:84px;left:0;right:0;background:var(--ink);padding:14px 4vw 24px;border-top:1px solid var(--line-l)}
   nav.open .drop{position:static;opacity:1;visibility:visible;transform:none;background:none;color:#c9d4cc;box-shadow:none;padding:0 0 0 14px}
   .hero-in{grid-template-columns:1fr}
+  .rv-body{grid-template-columns:1fr}
+  .rv-photo{min-height:300px}
+  .rv-tabs{grid-template-columns:1fr 1fr}
+  .rv-tab:nth-child(2){border-right:0}
   .hero-stats{grid-template-columns:1fr 1fr}
   .hero-stats div:nth-child(2){border-right:0}
-  .best .wrap,.svc,.why-top,.rv,.prep-grid,.ct,.bestis{grid-template-columns:1fr}
+  .best .wrap,.svc,.why-top,.prep-grid,.ct,.bestis{grid-template-columns:1fr}
   .svc-preview{display:none}
   .svc-item p{max-height:none;opacity:1;margin-top:10px}
   .why-grid{grid-template-columns:1fr 1fr}
@@ -336,7 +351,9 @@ footer{background:var(--ink);color:#fff;padding:90px 0 0;overflow:hidden}
   .track:before{display:none}
   .serve .wrap{flex-direction:column;align-items:start;padding:90px 0}
   .ex-card{padding:32px 24px}
-  .rv-stage{min-height:560px}
+  .rv-card{padding:36px 24px}
+  .rv-top{flex-direction:column;align-items:start}
+  .rv-tab{padding:16px 14px}
   .best-vis{height:440px}
   .sheet{padding:28px 22px}
   .bestis-txt{padding:60px 6vw}
@@ -549,37 +566,50 @@ footer{background:var(--ink);color:#fff;padding:90px 0 0;overflow:hidden}
 
 <!-- TESTIMONIALS -->
 <section class="reviews">
-  <div class="wrap rv">
-    <div class="rv-side rv-up">
-      <div class="sec-label tag" style="color:var(--green)"><i style="color:#fff">05</i> Client stories</div>
-      <h2 class="h2">Customer satisfaction <em>guaranteed.</em></h2>
+  <div class="wrap">
+    <div class="rv-top rv-up">
+      <div>
+        <div class="sec-label tag" style="color:var(--green)"><i style="color:#fff">05</i> Client stories</div>
+        <h2 class="h2">Customer satisfaction <em>guaranteed.</em></h2>
+      </div>
       <div class="rv-nav">
         <button onclick="slide(-1)" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
         <button onclick="slide(1)" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       </div>
-      <div class="rv-count" id="rvCount">01 / 04</div>
     </div>
-    <div class="rv-stage">
-      <div class="rv-slide on">
-        <div class="tag tg">Never Disappointed</div>
-        <blockquote>I've been using Clean means Clean Janitorial for the past 7 years. Brian's experience and cost-effective approach stand out, and any problem is handled quickly.</blockquote>
-        <div class="rv-who"><div class="av">RB</div><div><strong>Ray B.</strong><span>Owner, Abbotsford No Frills</span></div></div>
+    <div class="rv-body rv-up">
+      <div class="rv-photo">
+        <img src="images/office-crew.webp" alt="Clean Means Clean team cleaning a commercial office">
+        <span class="count tag" id="rvCount">01 / 04</span>
       </div>
-      <div class="rv-slide">
-        <div class="tag tg">Highly Recommend</div>
-        <blockquote>Have been using Clean Means Clean for over 5 years, since we opened our store in 2017. The staff are professional and no job has been too big or too small.</blockquote>
-        <div class="rv-who"><div class="av">K</div><div><strong>Kiven</strong><span>Client since 2017</span></div></div>
+      <div class="rv-card">
+        <div class="rv-slide on">
+          <div class="tag tg">Never Disappointed</div>
+          <blockquote>I've been using Clean means Clean Janitorial for the past 7 years. Brian's experience and cost-effective approach stand out, and any problem is handled quickly.</blockquote>
+          <div class="rv-who"><div class="av">RB</div><div><strong>Ray B.</strong><span>Owner, Abbotsford No Frills</span></div></div>
+        </div>
+        <div class="rv-slide">
+          <div class="tag tg">Highly Recommend</div>
+          <blockquote>Have been using Clean Means Clean for over 5 years, since we opened our store in 2017. The staff are professional and no job has been too big or too small.</blockquote>
+          <div class="rv-who"><div class="av">K</div><div><strong>Kiven</strong><span>Client since 2017</span></div></div>
+        </div>
+        <div class="rv-slide">
+          <div class="tag tg">High Quality Work</div>
+          <blockquote>Their team provides high quality work every time. Day-to-day cleaning, window cleaning, floor stripping and waxing, and special requests sorted with one phone call.</blockquote>
+          <div class="rv-who"><div class="av">EN</div><div><strong>Eric N.</strong><span>Client for 3 years</span></div></div>
+        </div>
+        <div class="rv-slide">
+          <div class="tag tg">Excellent Relationship</div>
+          <blockquote>I started using Clean means Clean in 2013 when we had the most damaging flood in Canadian history. What began as business has become a friendship.</blockquote>
+          <div class="rv-who"><div class="av">RT</div><div><strong>Rob T.</strong><span>Client since 2013</span></div></div>
+        </div>
       </div>
-      <div class="rv-slide">
-        <div class="tag tg">High Quality Work</div>
-        <blockquote>Their team provides high quality work every time. Day-to-day cleaning, window cleaning, floor stripping and waxing, and special requests sorted with one phone call.</blockquote>
-        <div class="rv-who"><div class="av">EN</div><div><strong>Eric N.</strong><span>Client for 3 years</span></div></div>
-      </div>
-      <div class="rv-slide">
-        <div class="tag tg">Excellent Relationship</div>
-        <blockquote>I started using Clean means Clean in 2013 when we had the most damaging flood in Canadian history. What began as business has become a friendship.</blockquote>
-        <div class="rv-who"><div class="av">RT</div><div><strong>Rob T.</strong><span>Client since 2013</span></div></div>
-      </div>
+    </div>
+    <div class="rv-tabs">
+      <button class="rv-tab on" onclick="go(0)"><strong>Ray B.</strong><span>Never Disappointed</span></button>
+      <button class="rv-tab" onclick="go(1)"><strong>Kiven</strong><span>Highly Recommend</span></button>
+      <button class="rv-tab" onclick="go(2)"><strong>Eric N.</strong><span>High Quality Work</span></button>
+      <button class="rv-tab" onclick="go(3)"><strong>Rob T.</strong><span>Excellent Relationship</span></button>
     </div>
   </div>
 </section>
@@ -739,10 +769,13 @@ items.forEach((it,i)=>it.addEventListener('mouseenter',()=>{
   cap.textContent=it.querySelector('.n').textContent+' / '+it.querySelector('h3').textContent;
 }));
 // testimonials
-const slides=[...document.querySelectorAll('.rv-slide')];let cur=0,timer;
-function slide(d){slides[cur].classList.remove('on');cur=(cur+d+slides.length)%slides.length;slides[cur].classList.add('on');
-  document.getElementById('rvCount').textContent=String(cur+1).padStart(2,'0')+' / 0'+slides.length;clearInterval(timer);timer=setInterval(()=>slide(1),7000)}
-timer=setInterval(()=>slide(1),7000);
+const slides=[...document.querySelectorAll('.rv-slide')],tabs=[...document.querySelectorAll('.rv-tab')];let cur=0,timer;
+function go(i){slides[cur].classList.remove('on');tabs[cur].classList.remove('on');cur=(i+slides.length)%slides.length;
+  slides[cur].classList.add('on');tabs[cur].classList.add('on');
+  document.getElementById('rvCount').textContent=String(cur+1).padStart(2,'0')+' / 0'+slides.length;
+  clearInterval(timer);timer=setInterval(()=>go(cur+1),7000)}
+function slide(d){go(cur+d)}
+timer=setInterval(()=>go(cur+1),7000);
 // checklist
 document.querySelectorAll('.chk').forEach(c=>c.addEventListener('click',()=>c.classList.toggle('done')));
 // reveal
